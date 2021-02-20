@@ -1,0 +1,19 @@
+version: '3.8'
+services:
+  composer:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+    working_dir: /app
+    entrypoint: composer
+
+  tests:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+    working_dir: /app
+    entrypoint: vendor/bin/phpunit

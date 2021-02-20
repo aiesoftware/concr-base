@@ -1,0 +1,27 @@
+{
+    "name": "concr/concr-base",
+    "description": "The base library for the Concr platform",
+    "type": "library",
+    "authors": [
+      {
+        "name": "Alex Eves",
+        "email": "alex.eves@aiesoftware.com"
+      }
+    ],
+    "require-dev": {
+      "phpunit/phpunit": "^9.5"
+    },
+    "require": {
+      "beberlei/assert": "^3.3"
+    },
+    "autoload": {
+      "psr-4": {
+        "Concr\\Base\\": "src/"
+      }
+    },
+    "autoload-dev": {
+      "psr-4": {
+          "Concr\\Base\\Tests\\": "tests/"
+      }
+    }
+}
