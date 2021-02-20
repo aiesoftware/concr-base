@@ -1,0 +1,14 @@
+name: Concr base package
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install dependencies
+        run: docker-compose run composer install
+      - name: Run tests
+        run: docker-compose run tests
